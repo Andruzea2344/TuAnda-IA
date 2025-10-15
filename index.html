@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mi Asistente IA</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Asistente conversacional personalizado." />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Puedes cambiar la fuente o usar system-ui -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components/chat-shell.css" />
+    <link rel="stylesheet" href="styles/components/buttons.css" />
+  </head>
+  <body>
+
+    <div class="background-layer" aria-hidden="true"></div>
+
+  <!-- Header eliminado temporalmente -->
+
+    <main class="main-centered" id="main-content">
+        <div class="layout-flex">
+          <div class="branding-container" style="text-align:center;">
+            <img src="assets/logo-tuandamio.png" alt="Logo Grupo Tuandamio" style="max-width:180px; margin-bottom:16px;" />
+            <h1 class="futbot-title">Hola, soy <span>Tu Andamio Bot</span></h1>
+            <p class="futbot-tagline">Tu asistente para andamios y construcción.</p>
+          </div>
+          <div id="d-id-frame"></div>
+        <script type="module"
+          src="https://agent.d-id.com/v2/index.js"
+          data-mode="full"
+          data-client-key="YXV0aDB8NjhlZThmZmQ4NTRiYTQyNDA1NjFhYTUxOkF4U0dKdFRURnV6dW5oVmVoSDZCZQ=="
+          data-agent-id="v2_agt_GnXq70w0"
+          data-name="did-agent"
+          data-monitor="true"
+          data-target-id="d-id-frame">
+        </script>
+        </div>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="" crossorigin="anonymous"></script>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
