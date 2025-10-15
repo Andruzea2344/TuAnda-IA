@@ -32,15 +32,31 @@
             <p class="futbot-tagline">Tu asistente para andamios y construcción.</p>
           </div>
           <div id="d-id-frame"></div>
-        <script type="module"
-          src="https://agent.d-id.com/v2/index.js"
-          data-mode="full"
-          data-client-key="YXV0aDB8NjhlZThmZmQ4NTRiYTQyNDA1NjFhYTUxOkF4U0dKdFRURnV6dW5oVmVoSDZCZQ=="
-          data-agent-id="v2_agt_GnXq70w0"
-          data-name="did-agent"
-          data-monitor="true"
-          data-target-id="d-id-frame">
-        </script>
+        <!-- Script D-ID debe ir fuera del div -->
+    </div>
+    <style>
+      #d-id-frame {
+        width: 100%;
+        min-height: 600px;
+        border: none;
+        border-radius: 1.5rem;
+        box-shadow: 0 2px 16px 0 rgba(31,101,194,0.12);
+        background: #f8fafc;
+        margin: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <script type="module"
+      src="https://agent.d-id.com/v2/index.js"
+      data-mode="full"
+      data-client-key="YXV0aDB8NjhlZThmZmQ4NTRiYTQyNDA1NjFhYTUxOkF4U0dKdFRURnV6dW5oVmVoSDZCZQ=="
+      data-agent-id="v2_agt_GnXq70w0"
+      data-name="did-agent"
+      data-monitor="true"
+      data-target-id="d-id-frame">
+    </script>
         </div>
     </main>
 
