@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mi Asistente IA</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Asistente conversacional personalizado." />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Puedes cambiar la fuente o usar system-ui -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components/chat-shell.css" />
+    <link rel="stylesheet" href="styles/components/buttons.css" />
+  </head>
+  <body>
+
+    <main id="main-content">
+      <div class="container">
+        <div class="left">
+          <div class="title-block">
+            <img src="assets/logo-tuandamio.png" alt="Grupo Tuandamio" style="max-width:220px; margin-bottom:1.2rem; display:block;">
+            <span class="subtitle">Tu asistente es</span>
+            <h1 class="main-title">Tu Andamio Bot.</h1>
+          </div>
+        </div>
+        <div class="right">
+          <div id="d-id-frame"></div>
+        </div>
+      </div>
+      <script type="module"
+        src="https://agent.d-id.com/v2/index.js"
+        data-mode="full"
+        data-client-key="YXV0aDB8NjhlZThmZmQ4NTRiYTQyNDA1NjFhYTUxOkF4U0dKdFRURnV6dW5oVmVoSDZCZQ=="
+        data-agent-id="v2_agt_GnXq70w0"
+        data-name="did-agent"
+        data-monitor="true"
+        data-target-id="d-id-frame">
+      </script>
+      <style>
+        body {
+          background: #111 !important;
+          color: #fff !important;
+          font-family: 'Poppins', Arial, sans-serif;
+        }
+        .container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+          width: 100vw;
+          gap: 3rem;
+          box-sizing: border-box;
+          padding: 2vw;
+        }
+        .left {
+          flex: 1 1 0;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          min-width: 260px;
+        }
+        .title-block {
+          border-left: 5px solid #fff;
+          padding-left: 2rem;
+        }
+        .subtitle {
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: #fff;
+          margin-bottom: 0.7rem;
+          display: block;
+        }
+        .main-title {
+          font-size: clamp(2.2rem, 6vw, 4.5rem);
+          font-weight: 700;
+          color: #fff;
+          margin: 0.2rem 0 0 0;
+          line-height: 1.1;
+        }
+        .right {
+          flex: 1 1 0;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          min-width: 320px;
+        }
+        #d-id-frame {
+          width: 100%;
+          max-width: 400px;
+          height: 640px;
+          min-height: 320px;
+          border-radius: 0;
+          box-shadow: none;
+          background: #222;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          position: relative;
+          overflow: visible;
+        }
+        #d-id-frame::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 0;
+          border: 3px solid #fff;
+          box-shadow: 0 0 32px 0 rgba(31,101,194,0.18);
+          pointer-events: none;
+          z-index: 2;
+        }
+        @media (max-width: 900px) {
+          .container {
+            flex-direction: column;
+            gap: 1.2rem;
+            padding: 2vw 0.5rem;
+          }
+          .left, .right {
+            justify-content: center;
+            min-width: unset;
+          }
+          #d-id-frame {
+            max-width: 98vw;
+            width: 98vw;
+            height: 320px;
+            min-height: 180px;
+            margin: 0 auto 1.2rem auto;
+            background: #222;
+          }
+          .title-block {
+            padding-left: 1rem;
+            border-left: 3px solid #fff;
+          }
+          .main-title {
+            font-size: 2rem !important;
+            color: #fff !important;
+          }
+          .subtitle {
+            color: #fff !important;
+          }
+        }
+      </style>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="" crossorigin="anonymous"></script>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
